@@ -1,4 +1,5 @@
 from repositories.user_repository import UserRepository
+from models.user import User
 
 class UserService:
   @staticmethod
@@ -9,7 +10,7 @@ class UserService:
         "id": user.id,
         "name": user.name,
         "email": user.email
-      }
+      }for user in users
     ]
 
   @staticmethod
